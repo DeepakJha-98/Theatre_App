@@ -1,0 +1,12 @@
+<h1>Screens :</h1>
+
+	<% @screens.each do |s| %>
+<ul>
+	<li>
+		<%= link_to "Screen : #{s.screen_id}", movie_path(s.id) %>
+	</li>
+</ul>
+
+<% end %>
+<br>
+<%= link_to "Back to Home page", root_path %>

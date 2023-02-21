@@ -1,0 +1,11 @@
+<h1>Customers :</h1>
+<% @customers.each do |c| %>
+	<ul>
+		<li>
+			<%= c.name %>
+		</li>
+	</ul>
+	
+<% end %>
+<br>
+<%= link_to "Back to Home page", root_path %>

@@ -1,0 +1,13 @@
+<h1>Theatre App</h1>
+
+<% @theatre.each do |t| %>
+<h1>
+	<%= link_to t.name, screens_index_path %>
+</h1>
+<% end %>
+
+<!-- <p>
+	<%= link_to "Customers" ,customers_path %>
+</p> -->
+	
+
