@@ -1,13 +1,30 @@
+<div style="background-color: lavender; text-align: center; padding: 20px;">
+<%= render "layouts/flash" %>
 <h1>Theatre App</h1>
 
 <% @theatre.each do |t| %>
-<h1>
+<h1 style="text-decoration-color: none;">
 	<%= link_to t.name, screens_index_path %>
 </h1>
 <% end %>
 
+
+
+
+</div>
+
+
+
+
+<!-- ----------- Not Used --------- -->
+
 <!-- <p>
 	<%= link_to "Customers" ,customers_path %>
+
+	<% if signed_in? %>
+	<%= link_to "Sign Out", sessions_destroy_path %>
+	<% else %>
+	<%= link_to "Sign In!", sessions_new_path %>
+<% end %>
 </p> -->
 	
-

@@ -1,18 +1,32 @@
+<div style="background-color: lavender; text-align: center;border-style: solid;padding: 20px;">
+<%= render "layouts/flash" %>
   <h1>Sign In</h1>
+  <hr>
+
+  <!-- as we don't have session model present in our database (as was in the case of @customer) so we'll give path of session's create action -->
+
   <%= form_for :session ,url: sessions_create_path do |f| %>
+  
     <p>
     <%= f.label 'email:'%><br>
     <%= f.text_field :email %>
+
     </p>
     <p>
     <%= f.label 'password:'%><br>
     <%= f.password_field :password %>
     </p>
     <p>
-    <%= f.submit 'Log In' %>
+    <%= f.submit 'Sign In' %>
+
     </p>
   <% end %>
 
 <br>
-<h3>New User <%= link_to " Sign up !" ,new_user_path %></h3>
-  <%= link_to "Back to Home page", root_path %>
+
+<h3>New User <%= link_to " Sign up !" ,new_customer_path %></h3>
+
+<br>
+<%= link_to "Back to Home page", root_path %>
+<br>
+</div>

@@ -1,2 +1,11 @@
-<h1>Sessions#index</h1>
-<p>Find me in app/views/sessions/index.html.erb</p>
+<!-- Booking confirmation shown here -->
+
+<div style="background-color: lavender; text-align: center;border-style: solid;padding: 20px;">
+<h1>Booking Successful</h1>
+
+<h3>
+	Customer id is :
+	<%= current_customer.email %>
+</h3>
+<%= link_to "Back to Home page", root_path %>
+</div>

@@ -1,0 +1,22 @@
+<!-- Booking the ticket of movie -->
+
+<div style="background-color: lavender; text-align: center;border-style: solid;padding: 20px;">
+<h3>Book Your Ticket :</h3>
+<% if signed_in? %>
+	<div>	
+		<%= form_for @customer, url: customer_path(customer_id: current_customer.id, theatre_id: @movie.screen.theatre.id, movie_id: @movie.id) do %>
+
+
+ 			<%= submit_tag "Book Ticket" %>
+	</div>
+		<% end %>
+<% else %>
+	<h3>Sign in first ...</h3>
+<% end %>
+<br>
+<%= link_to "Back to Home page", root_path %>
+</div>
+
+
+<!-- not for use	<%= label_tag :name %>
+<%= text_field_tag :name %> -->

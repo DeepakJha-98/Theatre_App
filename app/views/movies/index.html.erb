@@ -1,4 +1,4 @@
-<h1>Movies:</h1>
+ <h1>Movies:</h1>
 <% @movies.each do |m| %>
 	<ul>
 		<li>
@@ -7,9 +7,12 @@
 			</h2>
 		</li>
 	</ul>
-	<h3><%= link_to "Book Ticket" %></h3>
+<% end %>
+
+
+<!-- previous work	<h3><%= link_to "Book Ticket" %></h3>
 	<h3>
 		<%= link_to "customers" ,customers_path(m.id) %>
 	</h3>
 	<hr>
-<% end %>
+ -->

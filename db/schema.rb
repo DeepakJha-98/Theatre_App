@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_21_043530) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_21_123946) do
   create_table "customers", force: :cascade do |t|
-    t.string "name"
-    t.integer "theatre_id", null: false
-    t.integer "movie_id", null: false
+    t.string "email"
+    t.integer "theatre_id"
+    t.integer "movie_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "password_digest"
     t.index ["movie_id"], name: "index_customers_on_movie_id"
     t.index ["theatre_id"], name: "index_customers_on_theatre_id"
   end
@@ -49,13 +50,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_21_043530) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string "email"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "password_digest"
   end
 
   add_foreign_key "customers", "movies"

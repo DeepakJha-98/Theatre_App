@@ -1,12 +1,16 @@
-<h1>Screens :</h1>
+<%= render "layouts/flash" %>
+<div style="background-color: lavender; text-align: center;border-style: solid;padding: 20px;">
+
+<h1>Screens :</h1><hr>
 
 	<% @screens.each do |s| %>
-<ul>
-	<li>
+
+	
 		<%= link_to "Screen : #{s.screen_id}", movie_path(s.id) %>
-	</li>
-</ul>
+		<br>
+		<br>
 
 <% end %>
 <br>
 <%= link_to "Back to Home page", root_path %>
+</div>

@@ -1,6 +1,8 @@
 class MoviesController < ApplicationController
   def index
-    @movies =Movie.all
+    # ----------- not for use ------------
+    # # @movies =Movie.all
+    # @movie = Movie.released_before
   end
 
   def show

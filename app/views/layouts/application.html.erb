@@ -1,16 +1,33 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>TheatreApp</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <title>TheatreApp</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
-  </head>
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  <%= javascript_importmap_tags %>
+  <style>
+    .error_message{
+      color: red;
+    }
+  </style>
+</head>
 
-  <body>
-    <%= yield %>
-  </body>
+<body style="background-color:lightblue;">
+  <h2 style="text-align: center;margin: 0px;padding: 20px;">Welcome to Theatre App</h2>
+  <div style="padding: 15px;">
+  <% if signed_in? %>
+  <%= link_to "Sign Out !", sessions_destroy_path %>
+  <% else %>
+  <%= link_to "Sign In!", sessions_new_path %>
+  <% end %>
+  </div>
+  <%= yield %>
+
+  <br>
+
+  <h3 style="position: fixed;left: 0;bottom: 0;width: 100%;background-color: red;color: white; text-align: center">This website is developed by Deepak</h3>
+</body>
 </html>

@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   resources :movies
   resources :customers
 
-  resources :users
+  # resources :users
   # resources :sessions
 
   # get 'sessions/new'
